@@ -14,6 +14,7 @@ def index(request):
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={app_key}&lang=es"
     r = requests.get(url).json()
 
+    #data clima almacena los 5 dias y 3 horas del clima
     data_clima = []
     for forecast in r["list"]:
         fecha = forecast['dt_txt']
