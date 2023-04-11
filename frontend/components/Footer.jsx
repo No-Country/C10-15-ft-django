@@ -2,10 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-Primary py-12'>
+    <div className='bg-black py-12'>
       <div className='container mx-auto'>
         <p className='text-white text-center'>
-          Copyright &copy; Ecommerce Shop 2023. All rights reserved
+          Copyright &copy; World Weather 2023. All rights reserved.
         </p>
       </div>
     </div>
