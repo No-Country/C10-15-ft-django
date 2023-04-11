@@ -6,7 +6,10 @@
     <meta name="description" content="description"/>
     <meta name="author" content="author" />
     <meta name="keywords" content="keywords" />
-
+    <link rel="stylesheet" href="./stylesheet.css" type="text/css" />
+    <style type="text/css">.body { width: auto; }</style>
+    <link rel="preload" href="https://site.com/non-critical-styles.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="https://site.com/non-critical-styles.css" media="print" onload="this.media='all'" />
   </head>
   <body>
     <form method="POST"> 
@@ -21,7 +24,7 @@
     <h1>{{day}}</h1>
     <h1>{{city}}</h1>
     <h1>{{humidity}}%</h1>
-    <h1>{{pressure}}</h1>
+    <h1>{{pressure}}mb</h1>
     <h1>{{fecha}}</h1>
 
     <img src="https://api.openweathermap.org/img/w/{{icon}}.png" width="100px" />
