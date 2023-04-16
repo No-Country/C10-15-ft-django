@@ -8,8 +8,6 @@ def index(request):
     else:
         city = 'Lima'
 
-
-
     app_key= '2c6fca1ef64f124ab2be792989b962f1'
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={app_key}&lang=es"
     r = requests.get(url).json()
@@ -38,5 +36,8 @@ def index(request):
     
     
 
-    return render(request, 'weatherApp/index.html', {'data_clima': data_clima, 'description':descripcion, 'fecha':fecha,
-                                                     'icon':icon, 'temp':temp,'temp_farenheit':temp_farenheit, 'city':city, 'humidity':humidity, 'pressure':pressure})
+    return render(request, 'index.html', {'data_clima': data_clima, 'description':descripcion, 'fecha':fecha,
+                                                        'icon':icon, 'temp':temp,'temp_farenheit':temp_farenheit, 'city':city, 'humidity':humidity, 'pressure':pressure})
+
+def login(request):
+    return render(request, 'login.html')
