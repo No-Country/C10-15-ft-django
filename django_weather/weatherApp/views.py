@@ -45,5 +45,5 @@ def login(request):
 def register(request):
     return render(request, 'register.html')
 
-def register(request):
+def about(request):
     return render(request, 'about.html')
