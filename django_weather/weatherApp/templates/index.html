@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div class="flex flex-col" style="padding-top: 25px;padding-bottom: 5rem;padding-left: 28rem;padding-right: 28rem;">
-  <div class="flex flex-row justify-center items-center p-24">
+<div class="flex flex-col" style="padding-top: 25px;padding-bottom: 5rem;padding-left: 38rem;padding-right: 38rem;">
+  <div class="flex flex-row justify-center items-center p-24" style="padding-bottom: 2rem;">
     <form method="POST">
       {% csrf_token %} 
       <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -63,28 +63,28 @@
 
 {# start the table with content#}
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg pt-8 pl-20 pr-20" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
-  <div style="padding-left: 10rem;padding-right: 10rem;padding-bottom: 3rem;">
+  <div style="padding-left: 15rem;padding-right: 15rem;padding-bottom: 3rem;">
     <table class="w-full text-sm text-left" style="border-radius: 1rem; background: linear-gradient(180deg, rgba(33,79,109,1) 0%, rgba(8,35,61,1) 100%);">
       <thead class="text-xs text-white uppercase">
           <tr>
               <th scope="col" class="px-6 py-3">
-                  Fecha
+                  Date
               </th>
               <th scope="col" class="px-6 py-3">
-                Descripcion
+                Description
               </th>
               <th scope="col" class="px-6 py-3" style="text-align: start;">
-                  Temperatura en C°
+                Temperature in C°
               </th>
               <th scope="col" class="px-6 py-3" style="text-align: start;">
-                  Temperatura en F°
+                Temperature in F°
               </th>
               <th scope="col" class="px-6 py-3" style="text-align: start;">
-                  Icono
+                State
               </th>
           </tr>
       </thead>
-      <tbody>
+      <tbody class="" style="background: linear-gradient(180deg, rgba(33,79,109,1) 0%, rgba(8,35,61,1) 100%);">
         {% for day in data_clima %}
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
