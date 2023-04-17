@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="flex flex-col" style="padding-top: 25px;padding-bottom: 15rem;padding-left: 15rem;padding-right: 15rem;">
+<div class="flex flex-col" style="padding-top: 25px;padding-bottom: 5rem;padding-left: 28rem;padding-right: 28rem;">
   <div class="flex flex-row justify-center items-center p-24">
     <form method="POST">
       {% csrf_token %} 
@@ -34,77 +34,78 @@
     <div>
       <h1 class="text-white font-medium text-base" style="font-size: 16px; font-weight: 400;">El mínimo alcanzará los</h1>
     </div>
-    <div class="flex flex-row">
-        <div class="flex flex-col">
-          <h1 class="text-white">Calidad del Aire</h1>
-          <h1>Valor</h1>
+    <div class="flex flex-row ">
+        <div class="flex flex-col p-2" >
+          <h1 class="text-white">
+            <i class="fa-regular fa-wind fa-2xs" style="color: #ff5757;"></i>Viento
+          </h1>
+          <h1 class="text-white">Valor</h1>
         </div>
-        <div class="flex flex-col" >
-          <h1 class="text-white">Viento</h1>
-          <h1>Valor</h1>
-        </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col p-2">
           <h1 class="text-white">Humedad</h1>
-          <h1>Valor</h1>
+          <h1 class="text-white">Valor</h1>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col p-2">
           <h1 class="text-white">Visibilidad</h1>
-          <h1>Valor</h1>
+          <h1 class="text-white">Valor</h1>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col p-2">
           <h1 class="text-white">Presión</h1>
-          <h1>Valor</h1>
+          <h1 class="text-white">Valor</h1>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col p-2">
           <h1 class="text-white">Punto de condensación</h1>
           <h1 class="text-white">Valor</h1>
         </div>
     </div>
   </div>
-  
-  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                    Fecha
-                </th>
-                <th scope="col" class="px-6 py-3">
-                  Descripcion
-                </th>
-                <th scope="col" class="px-6 py-3" style="text-align: start;">
-                    Temperatura en C°
-                </th>
-                <th scope="col" class="px-6 py-3" style="text-align: start;">
-                    Temperatura en F°
-                </th>
-                <th scope="col" class="px-6 py-3" style="text-align: start;">
-                    Icono
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-          {% for day in data_clima %}
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{ day.fecha }}
-                </th>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  {{ day.description }}
+</div>
+
+{# start the table with content#}
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg pt-8 pl-20 pr-20" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+  <div style="padding-left: 10rem;padding-right: 10rem;padding-bottom: 3rem;">
+    <table class="w-full text-sm text-left" style="border-radius: 1rem; background: linear-gradient(180deg, rgba(33,79,109,1) 0%, rgba(8,35,61,1) 100%);">
+      <thead class="text-xs text-white uppercase">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  Fecha
               </th>
-                <td class="px-6 py-4">
-                  {{ day.temp }}
-                </td>
-                <td class="px-6 py-4">
-                  {{ day.temp_farenheit }}
-                </td>
-                <td class="px-6 py-4">
-                  <img src="https://api.openweathermap.org/img/w/{{ day.icon }}.png" width="50px"/>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+              <th scope="col" class="px-6 py-3">
+                Descripcion
+              </th>
+              <th scope="col" class="px-6 py-3" style="text-align: start;">
+                  Temperatura en C°
+              </th>
+              <th scope="col" class="px-6 py-3" style="text-align: start;">
+                  Temperatura en F°
+              </th>
+              <th scope="col" class="px-6 py-3" style="text-align: start;">
+                  Icono
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+        {% for day in data_clima %}
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  {{ day.fecha }}
+              </th>
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{ day.description }}
+            </th>
+              <td class="px-6 py-4">
+                {{ day.temp }}
+              </td>
+              <td class="px-6 py-4">
+                {{ day.temp_farenheit }}
+              </td>
+              <td class="px-6 py-4">
+                <img src="https://api.openweathermap.org/img/w/{{ day.icon }}.png" width="50px"/>
+              </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
   </div>
 </div>
 {% endblock content %}

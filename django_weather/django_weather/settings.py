@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'weatherApp',
     'compressor',
     'django_browser_reload',
+    'fontawesomefree',
 ]
 
 MIDDLEWARE = [
