@@ -12,11 +12,15 @@ def index(request):
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={app_key}&lang=es"
     r = requests.get(url).json()
 
+    forecasts_five= r['list'][:10]
+
     data_clima = []
-    for forecast in r["list"]:
-        fecha = forecast['dt_txt']
+    for forecast in forecasts_five:
+        fecha = forecast['dt_txt'] 
         humidity = forecast['main']['humidity']
         pressure = forecast['main']['pressure']
+        visibility= forecast['visibility']
+        wind= forecast['wind']['speed']
         temp_kelvin = forecast['main']['temp']
         temp = round(temp_kelvin - 273.15) # transforma de > kelvin a Celsius
         temp_farenheit = round((temp * 9/5) + 32) # transforma de > celsius a farenheit
@@ -32,12 +36,11 @@ def index(request):
             'icon':icon, 
             'temp':temp,
             'temp_farenheit':temp_farenheit,
+            
         })
     
-    
-
     return render(request, 'index.html', {'data_clima': data_clima, 'description':descripcion, 'fecha':fecha,
-                                                        'icon':icon, 'temp':temp,'temp_farenheit':temp_farenheit, 'city':city, 'humidity':humidity, 'pressure':pressure})
+                                                        'icon':icon, 'temp':temp,'temp_farenheit':temp_farenheit, 'city':city, 'humidity':humidity, 'pressure':pressure, 'visibility':visibility, 'wind':wind})
 
 def login(request):
     return render(request, 'login.html')

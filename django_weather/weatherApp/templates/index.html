@@ -19,7 +19,7 @@
   {#block to title and subtitle#}
   <div class="relative top-full" style="padding-top: 2rem;border-radius: 1rem;background: linear-gradient(180deg, rgba(33,79,109,1) 0%, rgba(8,35,61,1) 100%);padding: 2rem;">
     <div class="flex flex-col" style="padding-bottom: 1rem;">
-      <h2 class="text-white" style="font-size: 20px; font-weight: 600;">Meteorologia Actual</h2>
+      <h2 class="text-white" style="font-size: 20px; font-weight: 600;">Meteorologia Actual {{city}}</h2>
       <span class="text-white" style="font-size: 13px; font-weight: 300;">{{fecha}}</span>
     </div>
     {# block to img and temp °C + Detail and Sensacion termica#}
@@ -39,19 +39,19 @@
           <h1 class="text-white">
             <img src="https://img.icons8.com/windows/32/null/wind.png" style="color: #ff5757;"/></i>Wind
           </h1>
-          <h1 class="text-white">Valor</h1>
+          <h1 class="text-white">{{wind}}</h1>
         </div>
         <div class="flex flex-col p-2">
           <h1 class="text-white">Humedad</h1>
-          <h1 class="text-white">Valor</h1>
+          <h1 class="text-white">{{ humidity }}</h1>
         </div>
         <div class="flex flex-col p-2">
           <h1 class="text-white">Visibilidad</h1>
-          <h1 class="text-white">Valor</h1>
+          <h1 class="text-white">{{visibility}}</h1>
         </div>
         <div class="flex flex-col p-2">
           <h1 class="text-white">Presión</h1>
-          <h1 class="text-white">Valor</h1>
+          <h1 class="text-white">{{ pressure }}</h1>
         </div>
         <div class="flex flex-col p-2">
           <h1 class="text-white">Punto de condensación</h1>
@@ -62,7 +62,7 @@
 </div>
 
 {# start the table with content#}
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg pt-8 pl-20 pr-20" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg pt-8 pl-20 pr-20">
   <div style="padding-left: 15rem;padding-right: 15rem;padding-bottom: 3rem;">
     <table class="w-full text-sm text-left" style="border-radius: 1rem; background: linear-gradient(180deg, rgba(33,79,109,1) 0%, rgba(8,35,61,1) 100%);">
       <thead class="text-xs text-white uppercase">
