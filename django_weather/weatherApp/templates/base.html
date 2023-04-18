@@ -42,14 +42,14 @@
               <a href="{% url 'about' %}" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a>
             </li>
             <li>
-              <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a>
+              <a href="{% url 'contact' %}" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a>
             </li>
           </ul>
         </div>
         </div>
       </nav>
     </header>
-    <main style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+    <main class="flex flex-col" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
       <div class="" styles="top: 16px; visibility: hidden; min-width: 640px; left: 50%; transform: translateX(-304px); pointer-events: none;">
         {% block content %}
         {% endblock content %}
@@ -67,9 +67,6 @@
             </li>
             <li class="p-2">
                 <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-            </li>
-            <li class="p-2">
-                <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
             </li>
           </ul>
         </div>
