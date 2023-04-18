@@ -2,8 +2,9 @@
 
 {% block content %}
 
-<div class="flex flex-col" style="padding-top: 25px;padding-bottom: 5rem;padding-left: 30rem;padding-right: 30rem;">
-  <div class="flex flex-row justify-center items-center p-24" style="padding-bottom: 2rem;">
+
+<div class="flex flex-col pt-6 pb-20 pl-96 pr-96">
+  <div class="flex flex-row justify-center items-center pb-8 mt-24" style="padding-bottom: 2rem;">
     <form method="POST">
       {% csrf_token %} 
       <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -142,40 +143,7 @@
   </div>
 </div>
 
-
 </div>
 {% endblock content %}
-
-    <!-- <h1>{{temp_farenheit}}°F</h1>
-    <h1>{{day}}</h1>
-    <h1>{{city}}</h1>
-    <h1>{{humidity}}%</h1>
-    <h1>{{pressure}}mb</h1>
-    <h1>{{fecha}}</h1> -->
-
-<!--
-<table>
-  <thead>
-    <tr>
-      <th>Fecha y hora</th>
-      <th>Descripción</th>
-      <th>Temperatura (°C)</th>
-      <th>Temperatura (°F)</th>
-      <th>Icono</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for day in data_clima %}
-      <tr>
-        <td>{{ day.fecha }}</td>
-        <td>{{ day.description }}</td>
-        <td>{{ day.temp }}°C</td>
-        <td>{{ day.temp_farenheit }}°F</td>
-        <td><img src="https://api.openweathermap.org/img/w/{{ day.icon }}.png" width="50px"></td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
--->
 
 
