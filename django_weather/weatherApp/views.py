@@ -28,6 +28,8 @@ def index(request):
         visibility = forecast['visibility'] / 1000
         thermal = forecast['main']['feels_like']
         thermal_sensation = round(thermal - 275.15)
+        min_temp = forecast['main']['temp_min']
+        min_celsius = round(min_temp - 273.15)
         wind = forecast['wind']['speed']
         temp_kelvin = forecast['main']['temp']
         temp = round(temp_kelvin - 273.15)  # transforma de > kelvin a Celsius
@@ -50,7 +52,7 @@ def index(request):
 
     return render(request, 'index.html', {'data_clima': data_clima, 'description': descripcion, 'date': fecha,
                                           'icon': icon, 'temp': temp, 'temp_farenheit': temp_farenheit, 'city': city, 'humidity': humidity,
-                                          'pressure': pressure, 'visibility': visibility, 'wind': wind, 'thermal_sensation': thermal_sensation})
+                                          'pressure': pressure, 'visibility': visibility, 'wind': wind, 'thermal_sensation': thermal_sensation, 'min_celsius':min_celsius})
 
 
 def login(request):
