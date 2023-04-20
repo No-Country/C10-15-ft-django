@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, logout, login as auth_login
 from django.db import IntegrityError
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 import requests
 
 
@@ -104,6 +105,10 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
-
+@login_required
 def userin(request):
     return render(request, 'userin/userin.html')
+
+def log_out(request):
+    logout(request)
+    return redirect('/')

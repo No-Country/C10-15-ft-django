@@ -1,3 +1,13 @@
 {% extends 'base.html' %}
 
-<h1>USER</h1>
+{% block content %}
+{% if user.is_authenticated %}
+<li>
+    <h1>USER</h1>
+
+</li>
+
+{% endif %}
+<p>No haz iniciado seccion correctamente</p>
+
+{% endblock %}
