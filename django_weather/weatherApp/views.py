@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, logout, login as auth_login
 from django.db import IntegrityError
-from users.models import User
+from django.contrib.auth.models import User
 import requests
 
 
