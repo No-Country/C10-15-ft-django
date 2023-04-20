@@ -25,23 +25,25 @@
             </a>
           </div> {# Social login section#}
           <p class="text-gray-400 my-3">Or use you email account</p>
+          {{error}}
           <div class="flex flex-col items-center">
             <div class="bg-gray-100 w-64 p-2 flex items-center mb-3">
               <img src="https://img.icons8.com/windows/32/null/secured-letter--v1.png"  class="text-gray-400 m-2"/>
-              <input type="email" name="email" placeholder="email" class="bg-gray-100 outline-none text-sm flex-1"/>
+             <form action="{% url 'login' %}" method="POST">
+              {% csrf_token %}
+              <input type="email" name="email" id="email" placeholder="email" class="bg-gray-100 outline-none text-sm flex-1"/>
             </div>
             <div class="bg-gray-100 w-64 p-2 flex items-center mb-3">
               <img src="https://img.icons8.com/windows/32/null/lock-2--v1.png" class="text-gray-400 m-2/">
-              <input type="password" name="password" placeholder="password" class="bg-gray-100 outline-none text-sm flex-1"/>
+              <input type="password" name="password" id="password" placeholder="password" class="bg-gray-100 outline-none text-sm flex-1"/>
             </div>
             <div class="flex justify-between w-64 mb-5">
               <label class="flex items-center text-xs"><input type="checkbox" name="remember" 
               class="mr-1"/>Remember me </label>
               <a href="#" class="text-xs">Forgot Password</a>
             </div>
-            <a 
-          href="#" 
-          class="border-2 rounded-full px-12 py-2 inline-block font-semibold text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">Sign in</a>
+            <button type="submit" class="border-2 rounded-full px-12 py-2 inline-block font-semibold text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">Sign in</button>
+             </form>
           </div>
         </div>
       </div>
