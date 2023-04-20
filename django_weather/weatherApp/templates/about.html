@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 {#Presentacion Damian#}
@@ -8,11 +9,11 @@
     <div class="relative">
       <img
         class="h-1/4 absolute top-0 left-0 -z-10"
-        src="django_weather/weatherApp/static/dots.png"
+        src="{% static 'media/dots.png' %}"
         alt=""
       />
-      <div class="h-full rounded-full overflow-hidden">
-        <img src="static/scr/perfil.JPG" alt="PicPhoto" />
+      <div class="w-60 h-full rounded-full overflow-hidden">
+        <img src="{% static 'media/perfil.jpg' %}" alt="PicPhoto" />
       </div>
     </div>
     <!-- right -->
@@ -23,72 +24,79 @@
         Better Experience
       </h1>
       <p class="text-black">
-        Designer and weather app builder. Currently working with Nextjs, Tailwindcss, python, django. Learning Data Analytics. Soon to be a Programmer at the Universidad Tecnologia Nacional in Argentina.
+        I specialize in front-end development with JavaScript, Python and Bootstrap, but I also have back-end experience with Django, Next.js and MongoDB, MySQL. I have worked on several web projects, such as a task management application, an e-commerce website and a personal blog. I like to learn new technologies and keep up to date with industry trends. You can see some of my work in my portfolio or on my GitHub.
       </p>
-      <h2 class="text-gray-400 hover:text-red-600 font-medium">Django</h2>
-      <div class="w-full bg-gray-200 h-1.5 rounded-md">
-        <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
-      </div>
-      <h2 class="text-gray-400 hover:text-red-600 font-medium">Javascript</h2>
-      <div class="w-full bg-gray-200 h-1.5 rounded-md">
-        <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
-      </div>
-      <h2 class="text-gray-400 hover:text-red-600 font-medium">MySQL</h2>
+      <h2 class="text-black hover:text-red-600 font-medium">Python</h2>
       <div class="w-full bg-gray-200 h-1.5 rounded-md">
         <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
       </div>
-      <h2 class="text-gray-400 hover:text-red-600 font-medium">Nextjs</h2>
+      <h2 class="text-black hover:text-red-600 font-medium">Django</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-black hover:text-red-600 font-medium">Javascript</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-black hover:text-red-600 font-medium">MySQL</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-black hover:text-red-600 font-medium">Nextjs</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-black hover:text-red-600 font-medium">Tailwindcss</h2>
       <div class="w-full bg-gray-200 h-1.5 rounded-md">
         <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
       </div>
-      <h2 class="text-gray-400 hover:text-red-600 font-medium">Tailwindcss</h2>
-      <div class="w-full bg-gray-200 h-1.5 rounded-md">
-        <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
-      </div>
-      <h2 class="text-gray-400 hover:text-red-600 font-medium">HTML5</h2>
+      <h2 class="text-black hover:text-red-600 font-medium">HTML5</h2>
       <div class="w-full bg-gray-200 h-1.5 rounded-md">
         <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
       </div>
     </div>
   </div>
 </div>
-{#Presentacion Doliver#}
+{#Presentacion Doliver #}
 <div class="px-10">
   <div class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20">
     <!-- left -->
     <div class="relative">
       <img
         class="h-1/4 absolute top-0 left-0 -z-10"
-        src="django_weather/weatherApp/static/dots.png"
+        src="{% static 'media/dots.png' %}"
         alt=""
       />
-      <div class="h-full rounded-full overflow-hidden">
-        <img src="static/scr/perfil.JPG" alt="PicPhoto" />
+      <div class="w-60 h-full rounded-full overflow-hidden">
+        <img src="{% static 'media/cara.jpeg' %}" alt="Profile" />
       </div>
     </div>
     <!-- right -->
     <div class="my-auto flex flex-col gap-3">
-      <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
-      <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
+      <h1 class="text-indigo-600 font-bold">Doliver Antonio Gonzalez Poleo</h1>
+      <h1 class="text-3xl font-medium dark:text-white">Backend developer</h1>
       <h1 class="text-3xl font-medium dark:text-white">
         Better Experience
       </h1>
-      <p class="text-gray-400">
-        I design and build digital products. I'm also a multi-disciplinary
-        maker with over 10 years of experiences in wide range of design
-        disciplines.
+      <p class="text-black">
+        Backend developer of the Weather App project. I work with technologies like python, django and PostgreSQL. Self-taught in data science. My goal is to be able to apply my skills in different areas.
       </p>
-      <h2 class="text-gray-400 font-medium">HTML</h2>
-      <div class="w-full bg-gray-200 h-1.5 rounded-md">
-        <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
-      </div>
-      <h2 class="text-gray-400 font-medium">Javascript</h2>
+      <h2 class="text-black hover:text-red-600 font-medium">Django</h2>
       <div class="w-full bg-gray-200 h-1.5 rounded-md">
         <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
       </div>
-      <h2 class="text-gray-400 font-medium">React</h2>
+      <h2 class="text-black hover:text-red-600 font-medium">Python</h2>
       <div class="w-full bg-gray-200 h-1.5 rounded-md">
         <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-black hover:text-red-600 font-medium">PostgreSQL</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-black hover:text-red-600 font-medium">HTML5</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-2/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
       </div>
     </div>
   </div>
@@ -100,77 +108,39 @@
     <div class="relative">
       <img
         class="h-1/4 absolute top-0 left-0 -z-10"
-        src="django_weather/weatherApp/static/dots.png"
+        src="{% static 'media/dots.png' %}"
         alt=""
       />
-      <div class="h-full rounded-full overflow-hidden">
-        <img src="static/scr/perfil.JPG" alt="PicPhoto" />
+      <div class="w-60 h-full rounded-full overflow-hidden">
+        <img src="{% static 'media/irene.jpg' %}" alt="Profile" />
       </div>
     </div>
     <!-- right -->
     <div class="my-auto flex flex-col gap-3">
-      <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
-      <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
+      <h1 class="text-indigo-600 font-bold">Irene</h1>
+      <h1 class="text-3xl font-medium dark:text-white">Manual Tester</h1>
       <h1 class="text-3xl font-medium dark:text-white">
         Better Experience
       </h1>
-      <p class="text-gray-400">
-        I design and build digital products. I'm also a multi-disciplinary
-        maker with over 10 years of experiences in wide range of design
-        disciplines.
+      <p class="text-black">
+        Introducing me to the world of manual and automatic QA.
       </p>
-      <h2 class="text-gray-400 font-medium">HTML</h2>
-      <div class="w-full bg-gray-200 h-1.5 rounded-md">
-        <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
-      </div>
-      <h2 class="text-gray-400 font-medium">Javascript</h2>
-      <div class="w-full bg-gray-200 h-1.5 rounded-md">
-        <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
-      </div>
-      <h2 class="text-gray-400 font-medium">React</h2>
+      <h2 class="text-black hover:text-red-600 font-medium">Spira</h2>
       <div class="w-full bg-gray-200 h-1.5 rounded-md">
         <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
       </div>
-    </div>
-  </div>
-</div>
-{#Presentacion Brian#}
-<div class="px-10">
-  <div class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20">
-    <!-- left -->
-    <div class="relative">
-      <img
-        class="h-1/4 absolute top-0 left-0 -z-10"
-        src="django_weather/weatherApp/static/dots.png"
-        alt=""
-      />
-      <div class="h-full rounded-full overflow-hidden">
-        <img src="static/scr/perfil.JPG" alt="PicPhoto" />
-      </div>
-    </div>
-    <!-- right -->
-    <div class="my-auto flex flex-col gap-3">
-      <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
-      <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
-      <h1 class="text-3xl font-medium dark:text-white">
-        Better Experience
-      </h1>
-      <p class="text-gray-400">
-        I design and build digital products. I'm also a multi-disciplinary
-        maker with over 10 years of experiences in wide range of design
-        disciplines.
-      </p>
-      <h2 class="text-gray-400 font-medium">HTML</h2>
-      <div class="w-full bg-gray-200 h-1.5 rounded-md">
-        <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
-      </div>
-      <h2 class="text-gray-400 font-medium">Javascript</h2>
+      <h2 class="text-black hover:text-red-600 font-medium">Rapise</h2>
       <div class="w-full bg-gray-200 h-1.5 rounded-md">
         <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
       </div>
-      <h2 class="text-gray-400 font-medium">React</h2>
+      <h2 class="text-black hover:text-red-600 font-medium">Jira</h2>
       <div class="w-full bg-gray-200 h-1.5 rounded-md">
-        <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+        <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-black hover:text-red-600 font-medium">HTML5</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-2/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
       </div>
     </div>
   </div>
